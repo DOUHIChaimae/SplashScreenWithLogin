@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">حساب</string>
+    <string name="name">"اسم المستخدم"</string>
+    <string name="password">"كلمة المرور"</string>
+    <string name="infos">معلومات حساب المستخدم</string>
+    <string name="login">"تسجيل الدخول"</string>
+    <string name="retour">رجوع</string>
+    <string name="changeLang">"تغيير اللغة"</string>
+    <string name="Welcome">"مرحبا"</string>
 </resources>

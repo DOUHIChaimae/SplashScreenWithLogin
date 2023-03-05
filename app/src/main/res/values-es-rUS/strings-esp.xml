@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TP2</string>
+    <string name="app_name">Cuenta</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="login">Login</string>
-    <string name="changeLang">Change language</string>
+    <string name="name">nombre de usuario</string>
+    <string name="password">contraseña</string>
+    <string name="infos">Información de la cuenta de usuario</string>
+    <string name="login">se conector</string>
+    <string name="changeLang">idiomas</string>
+    <string name="retour">devolver</string>
     <string name="action_sign_in" >Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="Welcome">"Bienvenida"</string>
+    <string name="invalid_username">No es un nombre de usuario válido</string>
+    <string name="invalid_password">La contraseña debe tener >5 caracteres</string>
+    <string name="login_failed">"error de inicio de sesion"</string>
 </resources>
