@@ -8,4 +8,6 @@
     <string name="retour">رجوع</string>
     <string name="changeLang">"تغيير اللغة"</string>
     <string name="Welcome">"مرحبا"</string>
+    <string name="splash">ادارة الحساب</string>
+
 </resources>

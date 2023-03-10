@@ -3,7 +3,9 @@ package ma.enset.tp2;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,14 +15,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import java.util.Locale;
 
 public class Activity2 extends AppCompatActivity {
+    Switch switcher;
+    Boolean nightMode;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
     Button btnLogin;
-    EditText editText1;
-    EditText editText2;
+    EditText editText1, editText2;
     private String TAG = "Message";
 
 
@@ -53,6 +59,31 @@ public class Activity2 extends AppCompatActivity {
                 intent.putExtra("name", name);
                 intent.putExtra("password", password);
                 startActivity(intent);
+            }
+        });
+        getSupportActionBar().hide();
+        switcher = findViewById(R.id.switcher);
+        //using sharedPreferences to save mode even if we exit the application
+        sharedPreferences = getSharedPreferences("MODE", Context.MODE_PRIVATE);
+        nightMode = sharedPreferences.getBoolean("night", false);//light mode is the default mode
+        if (nightMode) {
+            switcher.setChecked(true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
+        }
+        switcher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (nightMode) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("night", false);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("night", true);
+                }
+                editor.apply();
             }
         });
     }
