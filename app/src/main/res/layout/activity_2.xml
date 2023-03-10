@@ -9,24 +9,25 @@
 
     <LinearLayout
         android:layout_width="370dp"
-        android:layout_height="578dp"
+        android:layout_height="678dp"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:orientation="vertical">
 <LinearLayout
-    android:layout_width="350dp"
-    android:layout_height="40dp">
+    android:layout_width="320dp"
+    android:layout_height="60dp"
+    android:gravity="center"
+    android:layout_marginLeft="20dp">
+
     <TextView
+        style="@style/MODE"
         android:layout_width="370dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="ToolBar"
-        android:textSize="18sp"
         android:gravity="center_vertical"
         android:padding="10dp"
-        style="@style/TEXT"
-        android:textStyle="bold"
-        ></TextView>
+        android:textSize="18sp"
+        android:textStyle="bold"></TextView>
     <Switch
         android:id="@+id/switcher"
         android:layout_width="50dp"
@@ -56,7 +57,7 @@
 
         <EditText
             android:id="@+id/name"
-            android:layout_width="220dp"
+            android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="35dp"
@@ -71,7 +72,7 @@
 
         <EditText
             android:id="@+id/pass"
-            android:layout_width="220dp"
+            android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             style="@style/BUTTON"
@@ -88,28 +89,28 @@
             android:layout_width="wrap_content"
             android:layout_height="49dp"
             android:layout_marginLeft="70dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="60dp"
             android:layout_marginRight="60dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/login"
-                android:layout_width="120dp"
+                android:layout_width="118dp"
                 android:layout_height="50dp"
                 android:background="@drawable/button"
                 android:text="@string/login"
                 android:layout_marginLeft="0dp"
                 android:textColor="#fff"
-                android:textSize="11dp"></Button>
+                android:textSize="10dp"></Button>
 
             <Button
                 android:id="@+id/changeLangage"
-                android:layout_width="120dp"
+                android:layout_width="118dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/button"
                 android:text="@string/changeLang"
                 android:textColor="#fff"
-                android:textSize="11dp"></Button>
+                android:textSize="10dp"></Button>
 
         </LinearLayout>
     </LinearLayout>
