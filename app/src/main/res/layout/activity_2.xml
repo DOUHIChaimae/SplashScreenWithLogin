@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    style="@style/SCREEN"
     tools:context=".Activity2">
 
     <LinearLayout
@@ -13,30 +13,31 @@
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:orientation="vertical">
-<LinearLayout
-    android:layout_width="320dp"
-    android:layout_height="60dp"
-    android:gravity="center"
-    android:layout_marginLeft="20dp">
 
-    <TextView
-        style="@style/MODE"
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center_vertical"
-        android:padding="10dp"
-        android:textSize="18sp"
-        android:textStyle="bold"></TextView>
-    <Switch
-        android:id="@+id/switcher"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:gravity="center"
-        ></Switch>
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center">
+
+            <TextView
+                style="@style/MODE"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <Switch
+                android:id="@+id/switcher"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"></Switch>
 
 
-</LinearLayout>
+        </LinearLayout>
 
 
         <ImageView
@@ -57,6 +58,7 @@
 
         <EditText
             android:id="@+id/name"
+            style="@style/BUTTON"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -67,15 +69,14 @@
             android:hint="@string/name"
             android:inputType="textEmailAddress"
             android:padding="20dp"
-            style="@style/BUTTON"
             android:textColorHint="#2CA7E0"></EditText>
 
         <EditText
             android:id="@+id/pass"
+            style="@style/BUTTON"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            style="@style/BUTTON"
             android:layout_marginTop="10dp"
             android:background="@drawable/edit"
             android:drawableLeft="@drawable/ic_password"
@@ -97,9 +98,9 @@
                 android:id="@+id/login"
                 android:layout_width="118dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="0dp"
                 android:background="@drawable/button"
                 android:text="@string/login"
-                android:layout_marginLeft="0dp"
                 android:textColor="#fff"
                 android:textSize="10dp"></Button>
 
